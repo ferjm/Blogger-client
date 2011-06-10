@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>res/header.png</file>
+        <file>res/tabnav.png</file>
+        <file>res/back.png</file>
+        <file>res/mainback.png</file>
+        <file>res/arrow_open.gif</file>
+        <file>res/arrow.gif</file>
+    </qresource>
+</RCC>
