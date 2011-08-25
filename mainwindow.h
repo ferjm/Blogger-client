@@ -19,11 +19,17 @@ public:
 private:
     Ui::MainWindow *ui;
     QtgdataBloggerClient *bloggerClient;
+    AtomEntry *_currentEntry;
 
 public slots:
     void resizeRow(int n, bool expand);
     void onPostsRetrieved(AtomFeed*);
+    void onCommentsRetrieved(AtomFeed*);
     void retrievePosts();
+    void retrieveComments();
+    void editPost(AtomEntry* entry);
+    void cancelEdit();
+    void publish();
 };
 
 #endif // MAINWINDOW_H

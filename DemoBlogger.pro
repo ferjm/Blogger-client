@@ -12,13 +12,16 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    postframe.cpp
+    postframe.cpp \
+    commentframe.cpp
 
 HEADERS  += mainwindow.h \
-    postframe.h
+    postframe.h \
+    commentframe.h
 
 FORMS    += mainwindow.ui \
-    postframe.ui
+    postframe.ui \
+    commentframe.ui
 
 RESOURCES += \
     bloggerres.qrc

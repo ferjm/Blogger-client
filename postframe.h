@@ -17,6 +17,7 @@ public:
                        QString postId,
                        QString title,
                        QByteArray content,
+                       AtomEntry* entry,
                        QtgdataBloggerClient *bloggerClient,
                        QWidget *parent = 0);
     ~PostFrame();
@@ -25,6 +26,7 @@ private:
     Ui::PostFrame *ui;
 
     QtgdataBloggerClient *_bloggerClient;
+    AtomEntry *_entry;
 
     bool _arrowClosed;
     int _row;
@@ -32,13 +34,16 @@ private:
 
 private slots:
     void deletePost();
+    void onEditClicked();
 
 public slots:
     void changeArrow();
+    void viewPost();
 
 signals:
     void rowChanged(int row,bool expand);
     void rowDeleted();
+    void editPost(AtomEntry* entry);
 };
 
 #endif // POSTFRAME_H
